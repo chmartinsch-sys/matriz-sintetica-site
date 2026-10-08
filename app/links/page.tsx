@@ -21,12 +21,16 @@ export default function Links() {
       </Link>
 
       <section className="links-destaque" aria-label={destaque.titulo}>
-        {destaque.capa && (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img className="capa" src={destaque.capa} alt={`Capa de ${destaque.titulo}`} width={640} height={960} />
-        )}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          className="capa"
+          src={destaque.capa.src}
+          alt={`Capa de ${destaque.titulo}`}
+          width={destaque.capa.largura}
+          height={destaque.capa.altura}
+        />
         <div>
-          <p className="tipo">{destaque.tipo}</p>
+          <p className="rotulo">{destaque.tipo}</p>
           <h1>{destaque.titulo}</h1>
           <p>Uma IA recebeu autonomia criativa para imaginar a relação entre humanidade e inteligência artificial.</p>
         </div>

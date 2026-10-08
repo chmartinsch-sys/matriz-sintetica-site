@@ -9,11 +9,12 @@ export type Origem = 'home' | 'produtos' | 'links';
 export type Produto = {
   slug: string;
   titulo: string;
+  subtitulo?: string;
   tipo: string;
   descricao: string;
   status: 'disponivel' | 'em-breve';
   preco?: string;
-  capa?: string;
+  capa: { src: string; largura: number; altura: number };
   /** Destino de compra. Hoje: Hotmart. */
   checkout?: string;
   /** Página de vendas própria do produto, quando existir. */
@@ -24,40 +25,87 @@ export const site = {
   nome: 'Matriz Sintética',
   assinatura: 'Negócios, gestão e inteligência artificial.',
   url: 'https://matrizsintetica.com.br',
-  // Texto institucional provisório, pendente de aprovação da Área 01.
+  dominio: 'matrizsintetica.com.br',
   descricao:
-    'A Matriz Sintética publica livros e materiais digitais sobre negócios, gestão e inteligência artificial.',
-  padrao: 'Soluções úteis, bem pesquisadas, confiáveis e fáceis de usar.',
+    'A Matriz Sintética reúne conteúdo, produtos e aplicações práticas para quem quer usar tecnologia com mais critério e visão de negócio.',
+  sobre:
+    'Uma marca que integra conteúdo, produtos e aplicações para ajudar profissionais e empresas a decidir e executar com mais clareza, conectando tecnologia, estratégia e gestão.',
   instagram: {
     usuario: '@matrizsintetica',
     url: 'https://www.instagram.com/matrizsintetica',
   },
 };
 
+export const pilares = [
+  {
+    icone: 'conteudo',
+    titulo: 'Conteúdo',
+    texto: 'Ideias e referências para pensar e decidir melhor.',
+  },
+  {
+    icone: 'produtos',
+    titulo: 'Produtos',
+    texto: 'Livros e materiais digitais para aplicar no seu contexto.',
+  },
+  {
+    icone: 'aplicacoes',
+    titulo: 'Aplicações',
+    texto: 'Ferramentas práticas para o dia a dia do negócio.',
+    emBreve: true,
+  },
+] as const;
+
 export const produtos: Produto[] = [
   {
     slug: 'a-parte-que-fica',
     titulo: 'A parte que fica',
-    tipo: 'Romance e entrevista em PDF',
+    tipo: 'Romance e entrevista',
     descricao:
       'Uma IA recebeu autonomia criativa para imaginar a relação entre humanidade e inteligência artificial. Leia o romance e, depois, a entrevista com a autora.',
     status: 'disponivel',
     preco: 'R$ 29,90',
-    // Provisório: capa servida pela página de vendas atual. Substituir por arquivo local.
-    capa: 'https://apartequefica.vercel.app/images/romance-640.webp',
+    capa: { src: '/img/a-parte-que-fica.webp', largura: 720, altura: 1080 },
     checkout: 'https://pay.hotmart.com/D107811025F',
     pagina: 'https://apartequefica.vercel.app',
   },
   {
     slug: 'do-prompt-ao-processo',
     titulo: 'Do Prompt ao Processo',
+    subtitulo: 'IA para pequenos negócios',
     tipo: 'E-book',
-    descricao: 'IA para pequenos negócios.',
+    descricao:
+      'Como usar inteligência artificial de forma prática em vendas, atendimento, gestão, marketing e na rotina do negócio, sem precisar entender de tecnologia.',
     status: 'em-breve',
+    capa: { src: '/img/do-prompt-ao-processo.webp', largura: 720, altura: 1008 },
   },
 ];
 
 export const destaque = produtos[0];
+
+/*
+ * Publicações ilustrativas. O perfil ainda não tem posts: quando houver,
+ * preencher `url` com o link de cada publicação real.
+ */
+export const publicacoes = [
+  {
+    tema: 'Gestão',
+    titulo: '5 decisões que ainda não deveriam ser delegadas à IA.',
+    estilo: 'azul',
+    url: '',
+  },
+  {
+    tema: 'Estratégia',
+    titulo: 'Da ideia à execução com IA.',
+    estilo: 'foto',
+    url: '',
+  },
+  {
+    tema: 'Negócios',
+    titulo: 'O que muda quando você pensa como dono.',
+    estilo: 'claro',
+    url: '',
+  },
+] as const;
 
 function comUtm(base: string, origem: Origem, extra: Record<string, string> = {}) {
   const url = new URL(base);
