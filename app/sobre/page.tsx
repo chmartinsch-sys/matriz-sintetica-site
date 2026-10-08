@@ -87,10 +87,10 @@ export default function Sobre() {
           <div className="secao largura metodo">
             <div data-revelar>
               <p className="rotulo">Como trabalhamos</p>
-              <h2>Tudo passa pela Fábrica de Soluções.</h2>
+              <h2>Um método próprio: a Fábrica de Soluções.</h2>
               <p>
-                A Fábrica de Soluções é o método de desenvolvimento da Matriz Sintética. Nenhum produto chega ao mercado
-                sem percorrer as cinco etapas, e o que aprendemos em cada lançamento volta para o início do ciclo.
+                A Fábrica de Soluções é o método de desenvolvimento da Matriz Sintética. Cada novo produto percorre as
+                cinco etapas, e o que aprendemos em cada lançamento volta para o início do ciclo.
               </p>
             </div>
             <ol className="passos">
@@ -167,7 +167,7 @@ export default function Sobre() {
           </div>
           <div className="largura fecho-texto" data-revelar>
             <p className="rotulo">Produtos</p>
-            <h2>Veja o que já saiu da Fábrica.</h2>
+            <h2>Conheça os produtos da Matriz Sintética.</h2>
             <div className="acoes">
               <Link href="/produtos" className="botao botao-verde">
                 Ver produtos
