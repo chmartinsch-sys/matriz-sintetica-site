@@ -11,7 +11,7 @@ export function Cabecalho() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/logo.svg" alt="Matriz Sintética" width={527} height={184} />
         </Link>
-        <Menu instagram={site.instagram.url} />
+        <Menu />
       </div>
     </header>
   );
@@ -44,7 +44,8 @@ export function Rodape() {
           <img src="/logo.svg" alt="Matriz Sintética" width={527} height={184} loading="lazy" />
         </Link>
         <nav aria-label="Rodapé">
-          <Link href="/#sobre">Sobre</Link>
+          <Link href="/sobre">Sobre</Link>
+          <Link href="/#conteudos">Conteúdos</Link>
           <Link href="/produtos">Produtos</Link>
           <Link href="/links">Links</Link>
         </nav>

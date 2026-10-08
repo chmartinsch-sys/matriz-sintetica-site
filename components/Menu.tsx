@@ -1,33 +1,22 @@
 'use client';
 
 import Link from 'next/link';
-import { track } from '@vercel/analytics';
 import { useState } from 'react';
 
 /** Navegação principal: links em linha no desktop, painel recolhível no celular. */
-export function Menu({ instagram }: { instagram: string }) {
+export function Menu() {
   const [aberto, setAberto] = useState(false);
   const fechar = () => setAberto(false);
 
   return (
     <>
       <nav id="menu" className={`menu ${aberto ? 'menu-aberto' : ''}`} aria-label="Principal">
-        <Link href="/#sobre" onClick={fechar}>
+        <Link href="/sobre" onClick={fechar}>
           Sobre
         </Link>
-        <Link href="/produtos" onClick={fechar}>
-          Produtos
+        <Link href="/#conteudos" onClick={fechar}>
+          Conteúdos
         </Link>
-        <a
-          href={instagram}
-          rel="noopener"
-          onClick={() => {
-            track('clique_link', { destino: 'instagram', origem: 'cabecalho' });
-            fechar();
-          }}
-        >
-          Instagram
-        </a>
       </nav>
       <Link href="/produtos" className="botao botao-azul botao-compacto cabecalho-acao">
         Ver produtos

@@ -4,7 +4,7 @@
  * do produto. Nenhuma página precisa ser editada.
  */
 
-export type Origem = 'home' | 'produtos' | 'links';
+export type Origem = 'home' | 'produtos' | 'links' | 'sobre';
 
 export type Produto = {
   slug: string;
@@ -27,33 +27,12 @@ export const site = {
   url: 'https://matrizsintetica.com.br',
   dominio: 'matrizsintetica.com.br',
   descricao:
-    'A Matriz Sintética reúne conteúdo, produtos e aplicações práticas para quem quer usar tecnologia com mais critério e visão de negócio.',
-  sobre:
-    'Uma marca que integra conteúdo, produtos e aplicações para ajudar profissionais e empresas a decidir e executar com mais clareza, conectando tecnologia, estratégia e gestão.',
+    'A Matriz Sintética cria conteúdos, produtos e soluções para transformar inteligência artificial em decisões, processos e resultados.',
   instagram: {
     usuario: '@matrizsintetica',
     url: 'https://www.instagram.com/matrizsintetica',
   },
 };
-
-export const pilares = [
-  {
-    icone: 'conteudo',
-    titulo: 'Conteúdo',
-    texto: 'Ideias e referências para pensar e decidir melhor.',
-  },
-  {
-    icone: 'produtos',
-    titulo: 'Produtos',
-    texto: 'Livros e materiais digitais para aplicar no seu contexto.',
-  },
-  {
-    icone: 'aplicacoes',
-    titulo: 'Aplicações',
-    texto: 'Ferramentas práticas para o dia a dia do negócio.',
-    emBreve: true,
-  },
-] as const;
 
 export const produtos: Produto[] = [
   {
