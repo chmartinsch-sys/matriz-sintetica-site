@@ -626,78 +626,21 @@ a {
 }
 
 .post {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  aspect-ratio: 4 / 5;
-  max-height: 30rem;
-  width: 100%;
-  padding: clamp(1.5rem, 4vw, 2rem);
+  display: block;
   border-radius: var(--raio-g);
   overflow: hidden;
-  text-decoration: none;
-  color: var(--branco);
-  background-color: var(--azul);
-  background-size: cover;
-  isolation: isolate;
+  border: 1px solid var(--linha);
+  background: var(--branco);
   transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.35s ease;
+}
+.post img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
 }
 .post:hover {
   transform: translateY(-4px);
   box-shadow: var(--sombra);
-}
-.post .rotulo {
-  color: inherit;
-  opacity: 0.85;
-}
-.post-titulo {
-  font-family: var(--titulos);
-  font-size: clamp(1.5rem, 3.4vw, 1.9375rem);
-  font-weight: 400;
-  line-height: 1.16;
-  letter-spacing: -0.015em;
-  max-width: 13ch;
-  text-wrap: balance;
-}
-.post-pe {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin-top: auto;
-  font-family: var(--titulos);
-  font-size: 0.8125rem;
-  font-weight: 500;
-}
-
-.post-azul {
-  background-image:
-    linear-gradient(100deg, var(--azul) 46%, rgb(15 46 78 / 0.25) 100%),
-    url('/img/arquitetura-960.webp');
-  background-position: center, 92% center;
-  background-size: cover, 300%;
-}
-.post-foto {
-  background-image:
-    linear-gradient(180deg, rgb(15 46 78 / 0.82) 0%, rgb(15 46 78 / 0.35) 60%, rgb(15 46 78 / 0.7) 100%),
-    url('/img/arquitetura-960.webp');
-  background-position: center, 100% 30%;
-  background-size: cover, 330%;
-}
-.post-foto .post-titulo {
-  font-weight: 600;
-}
-.post-claro {
-  color: var(--azul);
-  background-color: var(--branco);
-  background-image:
-    linear-gradient(180deg, rgb(255 255 255 / 0.9) 0%, rgb(255 255 255 / 0.72) 55%, rgb(255 255 255 / 0.2) 100%),
-    url('/img/arquitetura-960.webp');
-  background-position: center, 40% 80%;
-  background-size: cover, 250%;
-  border: 1px solid var(--linha);
-}
-.post-claro .post-titulo {
-  font-weight: 600;
 }
 
 @media (min-width: 44rem) {

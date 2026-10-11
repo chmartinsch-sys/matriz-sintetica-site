@@ -27,7 +27,7 @@ export const site = {
   url: 'https://matrizsintetica.com.br',
   dominio: 'matrizsintetica.com.br',
   descricao:
-    'A Matriz Sintética cria conteúdos, produtos e soluções para transformar inteligência artificial em decisões, processos e resultados.',
+    'Conteúdo, soluções e aplicações práticas para transformar tecnologia em decisões, processos e resultados.',
   instagram: {
     usuario: '@matrizsintetica',
     url: 'https://www.instagram.com/matrizsintetica',
@@ -62,26 +62,26 @@ export const produtos: Produto[] = [
 export const destaque = produtos[0];
 
 /*
- * Publicações ilustrativas. O perfil ainda não tem posts: quando houver,
- * preencher `url` com o link de cada publicação real.
+ * Capas dos carrosséis em destaque. Quando cada post for publicado,
+ * preencher `url` com o link da publicação; sem link, o cartão leva ao perfil.
  */
 export const publicacoes = [
   {
-    tema: 'Gestão',
-    titulo: '5 decisões que ainda não deveriam ser delegadas à IA.',
-    estilo: 'azul',
-    url: '',
-  },
-  {
-    tema: 'Estratégia',
-    titulo: 'Da ideia à execução com IA.',
-    estilo: 'foto',
+    tema: 'Inteligência artificial',
+    titulo: 'A melhor dica que posso te dar para aprender a usar inteligência artificial. E não é um prompt.',
+    imagem: '/img/post-melhor-dica.webp',
     url: '',
   },
   {
     tema: 'Negócios',
-    titulo: 'O que muda quando você pensa como dono.',
-    estilo: 'claro',
+    titulo: 'Clientes não compram produtos. Compram soluções.',
+    imagem: '/img/post-solucoes.webp',
+    url: '',
+  },
+  {
+    tema: 'Gestão',
+    titulo: '5 decisões que uma empresa não deveria delegar à IA.',
+    imagem: '/img/post-5-decisoes.webp',
     url: '',
   },
 ] as const;

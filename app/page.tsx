@@ -26,7 +26,6 @@ export default function Home() {
             <Modulos />
           </div>
           <div className="largura hero-texto">
-            <p className="rotulo">Tecnologia, negócios, aplicação real</p>
             <h1>
               <span className="forte">Negócios, gestão</span>
               <span className="leve">e inteligência artificial.</span>
@@ -45,10 +44,7 @@ export default function Home() {
 
         <section id="conteudos" className="secao largura">
           <div className="secao-topo">
-            <div>
-              <p className="rotulo">Conteúdos</p>
-              <h2>Ideias curtas para quem decide.</h2>
-            </div>
+            <h2>Conteúdos em destaque</h2>
             <Saida
               href={site.instagram.url}
               className="link-seta"
@@ -63,17 +59,12 @@ export default function Home() {
               <Saida
                 key={post.titulo}
                 href={post.url || site.instagram.url}
-                className={`post post-${post.estilo}`}
+                className="post"
                 evento="clique_link"
                 dados={{ destino: 'instagram_post', tema: post.tema, origem: 'home' }}
               >
-                <span className="rotulo">{post.tema}</span>
-                <span className="post-titulo">{post.titulo}</span>
-                <span className="post-pe">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/simbolo.svg" alt="" width={28} height={28} loading="lazy" />
-                  {site.instagram.usuario}
-                </span>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={post.imagem} alt={post.titulo} width={720} height={900} loading="lazy" />
               </Saida>
             ))}
           </div>
@@ -84,10 +75,7 @@ export default function Home() {
             <div className="secao-topo">
               <div>
                 <p className="rotulo">Produtos</p>
-                <h2>Comece por onde faz mais sentido para você.</h2>
-                <p className="secao-intro">
-                  Produtos para pensar melhor, executar com mais clareza e usar a inteligência artificial com resultado.
-                </p>
+                <h2>Explore a Matriz Sintética</h2>
               </div>
               <Link href="/produtos" className="link-seta">
                 Ver todos os produtos <Seta />
