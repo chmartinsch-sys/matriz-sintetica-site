@@ -84,7 +84,7 @@ export const publicacoes = [
     tema: 'Gestão',
     titulo: '5 decisões que uma empresa não deveria delegar à IA.',
     imagem: '/img/post-5-decisoes.webp',
-    artigo: '',
+    artigo: '5-decisoes-que-uma-empresa-nao-deveria-delegar-a-ia',
     url: 'https://www.instagram.com/p/DeQbOg7ADCu/',
   },
 ] as const;
