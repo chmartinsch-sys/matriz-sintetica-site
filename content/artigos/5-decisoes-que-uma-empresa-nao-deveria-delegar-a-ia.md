@@ -7,7 +7,7 @@ data: "2026-10-12"
 capa: "/img/post-5-decisoes.webp"
 instagram: "https://www.instagram.com/p/DeQbOg7ADCu/"
 produto: "do-prompt-ao-processo"
-publicado: false
+publicado: true
 ---
 
 A inteligência artificial pode recomendar uma decisão. Mas quem responde pelas consequências?
