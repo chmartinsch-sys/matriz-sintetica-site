@@ -7,7 +7,7 @@ data: "2026-10-12"
 capa: "/img/post-prompt-processo.webp"
 instagram: "https://www.instagram.com/p/DeReVNblqxH/"
 produto: "do-prompt-ao-processo"
-publicado: false
+publicado: true
 ---
 
 Dois vendedores da mesma empresa usam a mesma inteligência artificial para analisar clientes.
