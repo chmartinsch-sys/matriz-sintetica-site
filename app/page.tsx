@@ -5,6 +5,7 @@ import { Cabecalho, Rodape, Seta } from '@/components/Estrutura';
 import { Modulos } from '@/components/Modulos';
 import { Revelar } from '@/components/Revelar';
 import { Saida } from '@/components/Saida';
+import { artigosPublicados } from '@/lib/artigos';
 import { produtos, publicacoes, site } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  const publicados = new Set(artigosPublicados().map((a) => a.slug));
   return (
     <>
       <Cabecalho />
@@ -63,10 +65,18 @@ export default function Home() {
             {publicacoes.map((post) => (
               <Saida
                 key={post.titulo}
-                href={post.url || site.instagram.url}
+                href={
+                  post.artigo && publicados.has(post.artigo)
+                    ? `/conteudos/${post.artigo}`
+                    : post.url || site.instagram.url
+                }
                 className="post"
                 evento="clique_link"
-                dados={{ destino: 'instagram_post', tema: post.tema, origem: 'home' }}
+                dados={{
+                  destino: post.artigo && publicados.has(post.artigo) ? 'artigo' : 'instagram_post',
+                  tema: post.tema,
+                  origem: 'home',
+                }}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={post.imagem} alt={post.titulo} width={720} height={900} loading="lazy" />

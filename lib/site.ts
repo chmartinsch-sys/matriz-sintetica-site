@@ -4,7 +4,7 @@
  * do produto. Nenhuma página precisa ser editada.
  */
 
-export type Origem = 'home' | 'produtos' | 'links' | 'sobre';
+export type Origem = 'home' | 'produtos' | 'links' | 'sobre' | 'artigo';
 
 export type Produto = {
   slug: string;
@@ -62,26 +62,29 @@ export const produtos: Produto[] = [
 export const destaque = produtos[0];
 
 /*
- * Capas dos carrosséis em destaque, cada uma ligada ao post publicado.
- * Sem `url`, o cartão leva ao perfil.
+ * Capas dos carrosséis em destaque. Quando o artigo do tema está publicado,
+ * a capa leva ao artigo; sem artigo, leva ao post no Instagram.
  */
 export const publicacoes = [
   {
     tema: 'Inteligência artificial',
     titulo: 'A melhor dica que posso te dar para aprender a usar inteligência artificial. E quase ninguém faz.',
     imagem: '/img/post-melhor-dica.webp',
+    artigo: '',
     url: 'https://www.instagram.com/p/DeXwX95mOE2/',
   },
   {
     tema: 'Processos',
     titulo: 'O problema não é o prompt. É o processo.',
     imagem: '/img/post-prompt-processo.webp',
+    artigo: 'o-problema-nao-e-o-prompt-e-o-processo',
     url: 'https://www.instagram.com/p/DeReVNblqxH/',
   },
   {
     tema: 'Gestão',
     titulo: '5 decisões que uma empresa não deveria delegar à IA.',
     imagem: '/img/post-5-decisoes.webp',
+    artigo: '',
     url: 'https://www.instagram.com/p/DeQbOg7ADCu/',
   },
 ] as const;

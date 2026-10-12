@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { destinoConteudos } from '@/lib/artigos';
 import { site } from '@/lib/site';
 import { Menu } from './Menu';
 import { Saida } from './Saida';
@@ -11,7 +12,7 @@ export function Cabecalho() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/logo.svg" alt="Matriz Sintética" width={527} height={184} />
         </Link>
-        <Menu />
+        <Menu conteudos={destinoConteudos()} />
       </div>
     </header>
   );
@@ -45,7 +46,7 @@ export function Rodape() {
         </Link>
         <nav aria-label="Rodapé">
           <Link href="/sobre">Sobre</Link>
-          <Link href="/#conteudos">Conteúdos</Link>
+          <Link href={destinoConteudos()}>Conteúdos</Link>
           <Link href="/produtos">Produtos</Link>
           <Link href="/links">Links</Link>
         </nav>

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 /** Navegação principal: links em linha no desktop, painel recolhível no celular. */
-export function Menu() {
+export function Menu({ conteudos }: { conteudos: string }) {
   const [aberto, setAberto] = useState(false);
   const fechar = () => setAberto(false);
 
@@ -14,7 +14,7 @@ export function Menu() {
         <Link href="/sobre" onClick={fechar}>
           Sobre
         </Link>
-        <Link href="/#conteudos" onClick={fechar}>
+        <Link href={conteudos} onClick={fechar}>
           Conteúdos
         </Link>
       </nav>
