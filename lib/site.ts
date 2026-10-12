@@ -70,7 +70,7 @@ export const publicacoes = [
     tema: 'Inteligência artificial',
     titulo: 'A melhor dica que posso te dar para aprender a usar inteligência artificial. E quase ninguém faz.',
     imagem: '/img/post-melhor-dica.webp',
-    artigo: '',
+    artigo: 'a-melhor-dica-para-aprender-a-usar-inteligencia-artificial',
     url: 'https://www.instagram.com/p/DeXwX95mOE2/',
   },
   {
