@@ -1,5 +1,11 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Cabecalho, Rodape } from '@/components/Estrutura';
+
+export const metadata: Metadata = {
+  title: 'Página não encontrada',
+  robots: { index: false, follow: true },
+};
 
 export default function NaoEncontrada() {
   return (

@@ -43,7 +43,7 @@ export const produtos: Produto[] = [
       'Uma IA recebeu autonomia criativa para imaginar a relação entre humanidade e inteligência artificial. Leia o romance e, depois, a entrevista com a autora.',
     status: 'disponivel',
     preco: 'R$ 29,90',
-    capa: { src: '/img/a-parte-que-fica.webp', largura: 720, altura: 1080 },
+    capa: { src: '/img/a-parte-que-fica.webp', largura: 480, altura: 720 },
     checkout: 'https://pay.hotmart.com/D107811025F',
     pagina: 'https://apartequefica.vercel.app',
   },
@@ -55,7 +55,7 @@ export const produtos: Produto[] = [
     descricao:
       'Como usar inteligência artificial de forma prática em vendas, atendimento, gestão, marketing e na rotina do negócio, sem precisar entender de tecnologia.',
     status: 'em-breve',
-    capa: { src: '/img/do-prompt-ao-processo.webp', largura: 720, altura: 1008 },
+    capa: { src: '/img/do-prompt-ao-processo.webp', largura: 480, altura: 672 },
   },
 ];
 
@@ -68,14 +68,14 @@ export const destaque = produtos[0];
 export const publicacoes = [
   {
     tema: 'Inteligência artificial',
-    titulo: 'A melhor dica que posso te dar para aprender a usar inteligência artificial. E não é um prompt.',
+    titulo: 'A melhor dica que posso te dar para aprender a usar inteligência artificial. E quase ninguém faz.',
     imagem: '/img/post-melhor-dica.webp',
     url: '',
   },
   {
-    tema: 'Negócios',
-    titulo: 'Clientes não compram produtos. Compram soluções.',
-    imagem: '/img/post-solucoes.webp',
+    tema: 'Processos',
+    titulo: 'O problema não é o prompt. É o processo.',
+    imagem: '/img/post-prompt-processo.webp',
     url: '',
   },
   {

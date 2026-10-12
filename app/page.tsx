@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { CartaoProduto } from '@/components/CartaoProduto';
 import { Cabecalho, Rodape, Seta } from '@/components/Estrutura';
@@ -5,6 +6,10 @@ import { Modulos } from '@/components/Modulos';
 import { Revelar } from '@/components/Revelar';
 import { Saida } from '@/components/Saida';
 import { produtos, publicacoes, site } from '@/lib/site';
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+};
 
 export default function Home() {
   return (

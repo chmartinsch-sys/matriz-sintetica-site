@@ -7,7 +7,7 @@ import { Saida } from '@/components/Saida';
 import { destaque, linkPagina } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'Sobre',
+  title: 'Sobre a Matriz Sintética e a Fábrica de Soluções',
   description:
     'A Matriz Sintética cria produtos, ferramentas e soluções com qualidade em inteligência artificial, gestão e negócios.',
   alternates: { canonical: '/sobre' },
@@ -69,7 +69,7 @@ export default function Sobre() {
           <div className="secao-topo">
             <div>
               <p className="rotulo">A proposta</p>
-              <h2>Três frentes, um mesmo padrão.</h2>
+              <h2>Tecnologia faz mais sentido quando melhora decisões, processos e resultados.</h2>
             </div>
           </div>
           <ul className="eixos">

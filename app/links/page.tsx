@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Links',
   description: 'Os principais destinos da Matriz Sintética.',
   alternates: { canonical: '/links' },
+  robots: { index: false, follow: true },
 };
 
 export default function Links() {
