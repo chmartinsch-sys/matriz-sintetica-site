@@ -7,7 +7,7 @@ data: "2026-10-12"
 capa: "/img/post-melhor-dica.webp"
 instagram: "https://www.instagram.com/p/DeXwX95mOE2/"
 produto: "do-prompt-ao-processo"
-publicado: false
+publicado: true
 ---
 
 Tem muita gente ensinando a usar inteligência artificial. Lista de ferramentas, prompt pronto, método infalível.
